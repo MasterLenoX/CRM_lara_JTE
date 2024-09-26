@@ -16,6 +16,6 @@ Route::prefix('auth')->name('auth.')->group(function(){
     });
 
     Route::middleware([])->group(function(){
-        Route::view('/home',[AuthController::class, 'index'])->name('home');
+        Route::get('/home',[AuthController::class,'index'])->name('home');
     });
 });
