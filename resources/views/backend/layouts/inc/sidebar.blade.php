@@ -197,7 +197,7 @@
     <div class="collapse navbar-collapse" id="sidebar-menu">
       <ul class="navbar-nav pt-lg-3">
         <li class="nav-item">
-          <a class="nav-link" href="./">
+          <a class="nav-link" href="{{ route('auth.home') }}">
             <span class="nav-link-icon d-md-none d-lg-inline-block">
               <!-- Download SVG icon from http://tabler-icons.io/i/home -->
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -216,13 +216,12 @@
         <li class="nav-item">
           <a class="nav-link" href="./">
             <span class="nav-link-icon d-md-none d-lg-inline-block">
-              <!-- Download SVG icon from http://tabler-icons.io/i/home -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-alien">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                <path d="M11 17a2.5 2.5 0 0 0 2 0" />
+                <path d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                <path d="M8 11l2 2" />
+                <path d="M16 11l-2 2" />
               </svg>
             </span>
             <span class="nav-link-title">
@@ -233,19 +232,48 @@
         <li class="nav-item">
           <a class="nav-link" href="./">
             <span class="nav-link-icon d-md-none d-lg-inline-block">
-              <!-- Download SVG icon from http://tabler-icons.io/i/home -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-4">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
-                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+                <path d="M7 6h10" />
+                <path d="M4 12h16" />
+                <path d="M7 12h13" />
+                <path d="M7 18h10" />
               </svg>
             </span>
             <span class="nav-link-title">
               Menu & Categories
             </span>
           </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false"
+            role="button" aria-expanded="false">
+            <span class="nav-link-icon d-md-none d-lg-inline-block">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-news">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+                <path d="M8 8l4 0" />
+                <path d="M8 12l4 0" />
+                <path d="M8 16l4 0" />
+              </svg>
+            </span>
+            <span class="nav-link-title">
+              Postings
+            </span>
+          </a>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-columns">
+              <div class="dropdown-menu-column">
+                <a class="dropdown-item" href="#">
+                  All Post
+                </a>
+                <a class="dropdown-item" href="#">
+                  Postings
+                  {{-- <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span> --}}
+                </a>
+              </div>
+            </div>
+          </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#navbar-base" data-bs-toggle="dropdown" data-bs-auto-close="false"
@@ -263,33 +291,46 @@
               </svg>
             </span>
             <span class="nav-link-title">
-              Interface
+              Employee Management
             </span>
           </a>
           <div class="dropdown-menu">
             <div class="dropdown-menu-columns">
               <div class="dropdown-menu-column">
-                <a class="dropdown-item" href="#">
-                  Dropdown menu sample
-                </a>
                 <div class="dropend">
                   <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown"
                     data-bs-auto-close="false" role="button" aria-expanded="false">
-                    Authentication
+                    201 File Details
                   </a>
                   <div class="dropdown-menu">
                     <a href="#" class="dropdown-item">
-                      Sign in
+                      Employee
                     </a>
                     <a href="#" class="dropdown-item">
-                      Sign in link
+                      Department
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Organizations
                     </a>
                   </div>
                 </div>
-                <a class="dropdown-item" href="./carousel.html">
-                  Carousel
-                  <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                </a>
+                <div class="dropend">
+                  <a class="dropdown-item dropdown-toggle" href="#sidebar-authentication" data-bs-toggle="dropdown"
+                    data-bs-auto-close="false" role="button" aria-expanded="false">
+                    Time Attendance
+                  </a>
+                  <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">
+                      Time loggers
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Leaves
+                    </a>
+                    <a href="#" class="dropdown-item">
+                      Overtime
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -298,49 +339,31 @@
           <a class="nav-link dropdown-toggle" href="#navbar-extra" data-bs-toggle="dropdown" data-bs-auto-close="false"
             role="button" aria-expanded="false">
             <span class="nav-link-icon d-md-none d-lg-inline-block">
-              <!-- Download SVG icon from http://tabler-icons.io/i/star -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-settings-2">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                <path d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z" />
+                <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
               </svg>
             </span>
             <span class="nav-link-title">
-              Extra
+              Settings
             </span>
           </a>
           <div class="dropdown-menu">
             <div class="dropdown-menu-columns">
               <div class="dropdown-menu-column">
                 <a class="dropdown-item" href="./empty.html">
-                  Empty page
+                  General Settings
                 </a>
                 <a class="dropdown-item" href="./cookie-banner.html">
-                  Cookie banner
-                  <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                </a>
-                <a class="dropdown-item" href="./chat.html">
-                  Chat
-                  <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                </a>
-              </div>
-              <div class="dropdown-menu-column">
-                <a class="dropdown-item" href="./logs.html">
-                  Logs
-                  <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
-                </a>
-                <a class="dropdown-item" href="./music.html">
-                  Music
-                </a>
-                <a class="dropdown-item" href="./photogrid.html">
-                  Photogrid
-                  <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span>
+                  Profile
+                  {{-- <span class="badge badge-sm bg-green-lt text-uppercase ms-auto">New</span> --}}
                 </a>
               </div>
             </div>
           </div>
         </li>
+
       </ul>
     </div>
   </div>
