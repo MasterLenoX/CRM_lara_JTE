@@ -52,8 +52,7 @@
   <body  class=" d-flex flex-column">
     <script src="./backend/dist/js/demo-theme.min.js?1726507346"></script>
     @yield('content')
-    <!-- Libs JS -->
-    <!-- Tabler Core -->
+
     <script src="./backend/dist/js/tabler.min.js?1726507346" defer></script>
     @stack('scripts')
     <script src="./backend/dist/js/demo.min.js?1726507346" defer></script>
