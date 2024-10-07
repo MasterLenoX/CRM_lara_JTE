@@ -1,0 +1,4 @@
+Email: larablogdev@gmail.com
+Name: Larablogdev
+Password: 12345
+Username: larablog
